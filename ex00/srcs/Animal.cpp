@@ -6,7 +6,7 @@
 /*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 14:22:52 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/06/06 14:49:45 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/06/07 07:02:39 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 
-Animal::Animal(void) : Animal("Animal") {};
-
-Animal::Animal(std::string type) : type(type)
+Animal::Animal(void) : type("Animal")
 {
-	std::cout << " Animal Constructor creates animal. Type: " << type << std::endl;
+	std::cout << "Animal Constructor creates animal. Type: Animal" << std::endl;
 }
 
 Animal::Animal(const Animal &other): type(other.type)
@@ -42,7 +40,7 @@ Animal &Animal::operator=(const Animal &other)
 
 void Animal::makeSound(void) const
 {
-	std::cout << "An Animal without a specific type does not mmake sounds " << std::endl;
+	std::cout << "An Animal without a specific type does not make sounds " << std::endl;
 }
 
 std::string Animal::getType(void) const

@@ -6,10 +6,11 @@
 /*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 05:22:12 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/06/06 14:11:44 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/06/07 07:56:10 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Animal.hpp"
 #include "Cat.hpp"
 
 Cat::Cat()
@@ -41,5 +42,5 @@ Cat::~Cat()
 
 void Cat::makeSound() const 
 {
-	std::cout << " Cat::Meow " << std::endl;
+	std::cout << "Cat: Meow Meow " << std::endl;
 }

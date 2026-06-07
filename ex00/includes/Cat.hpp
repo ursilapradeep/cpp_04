@@ -6,24 +6,26 @@
 /*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 15:51:44 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/06/06 15:15:06 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/06/07 05:22:49 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef CAT_HPP
+# define CAT_HPP
+
 #include "Animal.hpp"
-#include "Dog.hpp"
 
-class Cat
+class Cat : public Animal
 {
-	protected:
-	
-	Cat::Cat();
-	Cat::Cat(const Cat &other) : Animal(other);
-	Cat &Cat::operator=(const Cat &other);
-	Cat::~Cat()
-
 	public:
 	
-	void Cat::makeSound() const;
-}
+	Cat();
+	Cat(const Cat &other);
+	Cat &operator=(const Cat &other);
+	~Cat();
+	
+	void makeSound() const;
+};
+
+#endif
 
