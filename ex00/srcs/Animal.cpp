@@ -6,7 +6,7 @@
 /*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 14:22:52 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/06/07 07:02:39 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/06/10 08:59:15 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ Animal::Animal(void) : type("Animal")
 
 Animal::Animal(const Animal &other): type(other.type)
 {
-	std::cout << " Animal copy_constructor copies Animal from Type: " << other.type << std::endl;
+	std::cout << "Animal copy_constructor copies Animal from Type: " << other.type << std::endl;
 }
 
 Animal:: ~Animal(void)
 {
-	std::cout << " Animal destructor: " << this->type << std::endl;
+	std::cout << "Animal destructor: " << this->type << std::endl;
 }
 Animal &Animal::operator=(const Animal &other)
 {
@@ -47,3 +47,4 @@ std::string Animal::getType(void) const
 {
 	return this->type;
 }
+
