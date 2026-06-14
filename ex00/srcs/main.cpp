@@ -6,7 +6,7 @@
 /*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 15:11:28 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/06/10 12:52:16 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/06/12 16:10:49 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int main()
 	j->makeSound(); //will output the Dog sound
 	meta->makeSound();
 
-	std::cout << " \n --Incorrect Polymorphism_does_not_make_wrong_cat_sound" << std::endl;
+	std::cout << " \n Incorrect_Polymorphism_does_not_make_wrong_cat_sound" << std::endl;
 	
 	const WrongAnimal *z = new WrongCat();
 	std::cout << z->getType() << " " << std::endl;
@@ -44,4 +44,5 @@ int main()
 	
 	return 0; 
 }
+
 

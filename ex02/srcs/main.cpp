@@ -6,11 +6,11 @@
 /*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 15:11:28 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/06/12 12:16:01 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/06/14 08:08:40 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "Brain.hpp"
@@ -46,7 +46,7 @@ int main()
 	std::cout << "\nPolymorphism Array & Virtual Destructor\n";
 	{
 		const int size = 4;
-		const Animal *animals[size];
+		const AAnimal *animals[size];
 		
 		// Fill half with Dogs, half with Cats
 		for (int i = 0; i < size; i++)
