@@ -6,7 +6,7 @@
 #    By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/06 15:11:43 by uvadakku          #+#    #+#              #
-#    Updated: 2026/06/10 08:29:59 by uvadakku         ###   ########.fr        #
+#    Updated: 2026/08/31 16:16:24 by uvadakku         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,11 +20,11 @@ SRC_DIR = srcs
 OBJ_DIR = objs
 
 SRCS = main.cpp \
-							Animal.cpp \
-							Cat.cpp \
-							Dog.cpp \
-							WrongAnimal.cpp \
-							WrongCat.cpp 
+	Animal.cpp \
+	Cat.cpp \
+	Dog.cpp \
+	WrongAnimal.cpp \
+	WrongCat.cpp 
 
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
