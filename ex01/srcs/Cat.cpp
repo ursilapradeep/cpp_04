@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 05:22:12 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/06/11 16:40:24 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/09/03 16:21:59 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,22 @@
 
 Cat::Cat() : Animal() 
 {
-	type = "Cat";
+	std::cout << "Cat default constructor called" << std::endl;
 	brain = new Brain();
-	std::cout << "Cat: default constructor" << std::endl;
 }
 
 Cat::Cat(const Cat &other) : Animal(other) 
 {
-	type = other.type;
+	std::cout << "Cat copy constructor called" << std::endl;
 	brain = new Brain(*other.brain); // Deep copy
-	std::cout << "Cat: copy constructor" << std::endl;
 }
 
 Cat &Cat::operator=(const Cat &other) 
 {
+	std::cout << "Cat assignment operator called" << std::endl;
 	if (this != &other) 
 	{
-		std::cout << "Cat: assignment operator" << std::endl;
-		type = other.type;
-		if (brain)
-			delete brain;
+		Animal::operator=(other); // Call base class assignment operator
 		brain = new Brain(*other.brain); // Deep copy
 	}
 	return *this;
@@ -42,13 +38,13 @@ Cat &Cat::operator=(const Cat &other)
 
 Cat::~Cat() 
 {
+	std::cout << "Cat destructor called" << std::endl;
 	delete brain;
-	std::cout << "Cat: destructor" << std::endl;
 }
 
 void Cat::makeSound() const 
 {
- std::cout << "Cat: Woof Woof" << std::endl;
+ std::cout << "Meow" << std::endl;
 }
 
 void Cat::setIdea(int index, const std::string &idea) 
@@ -61,8 +57,7 @@ std::string Cat::getIdea(int index) const
  return brain->getIdea(index);
 }
 
-const std::string* Cat::getIdeaAddress(int index) const
+Brain *Cat::getBrain() const
 {
- return brain->getIdeaAddress(index);
+ return brain;
 }
-
