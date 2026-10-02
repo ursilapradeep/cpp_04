@@ -3,72 +3,60 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 14:35:36 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/06/14 10:17:06 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/10/02 17:05:18 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AAnimal.hpp"
 #include "Dog.hpp"
-#include "Brain.hpp"
-
-#include <iostream>
-#include <string>
 
 Dog::Dog() : AAnimal() 
 {
-	type = "Dog";
-	brain = new Brain();
-	std::cout << "Dog: default constructor" << std::endl;
+	std::cout << "Dog default constructor called" << std::endl;
+	this->brain = new Brain();
 }
 
 Dog::Dog(const Dog &other) : AAnimal(other) 
 {
-	type = other.type;
-	brain = new Brain(*other.brain); // Deep copy
-	std::cout << "Dog: copy constructor" << std::endl;
+	std::cout << "Dog copy constructor called" << std::endl;
+	this->brain = new Brain(*other.brain); // Deep copy
 }
 
 Dog &Dog::operator=(const Dog &other) 
 {
+	std::cout << "Dog: assignment operator" << std::endl;
 	if (this != &other) 
 	{
-		std::cout << "Dog: assignment operator" << std::endl;
-		type = other.type;
-		if (brain)
-			delete brain;
-		brain = new Brain(*other.brain); // Deep copy
+		AAnimal::operator=(other);
+		new (this->brain) Brain(*other.brain); // Deep copy
 	}
 	return *this;
 }
 
 Dog::~Dog() 
-
 {
-	delete brain;
-	std::cout << "Dog: destructor" << std::endl;
+	std::cout << "Dog destructor called" << std::endl;
+	delete this->brain;
 }
 
 void Dog::makeSound() const 
 {
- std::cout << "Dog: Woof Woof" << std::endl;
+ std::cout << " Woof Woof" << std::endl;
 }
 
 void Dog::setIdea(int index, const std::string &idea) 
 {
- brain->setIdea(index, idea);
+ this->brain->setIdea(index, idea);
 }
 
 std::string Dog::getIdea(int index) const 
 {
- return brain->getIdea(index);
+ return this->brain->getIdea(index);
 }
 
-const std::string* Dog::getIdeaAddress(int index) const
+Brain *Dog::getBrain() const 
 {
- return brain->getIdeaAddress(index);
+ return this->brain;
 }
-
-

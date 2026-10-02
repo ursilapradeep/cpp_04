@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+         #
+#    By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/06 15:11:43 by uvadakku          #+#    #+#              #
-#    Updated: 2026/06/14 08:13:27 by uvadakku         ###   ########.fr        #
+#    Updated: 2026/09/16 17:38:29 by uvadakku         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,18 +14,18 @@ CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -I includes
 
-NAME = animal
+NAME = ex02
 
 SRC_DIR = srcs
 OBJ_DIR = objs
 
 SRCS = main.cpp \
-							AAnimal.cpp \
-							Cat.cpp \
-							Dog.cpp \
-							Brain.cpp \
-							WrongAnimal.cpp \
-							WrongCat.cpp 
+		AAnimal.cpp \
+		Cat.cpp \
+		Dog.cpp \
+		Brain.cpp \
+		WrongAnimal.cpp \
+		WrongCat.cpp 
 
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 

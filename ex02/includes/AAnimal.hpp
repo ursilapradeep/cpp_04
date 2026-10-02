@@ -24,15 +24,15 @@ class AAnimal
 	public:
 		
 	AAnimal();
+	AAnimal(std::string type);
 	AAnimal(const AAnimal &other);
 	AAnimal &operator=(const AAnimal &other);
 	virtual ~AAnimal(); //Must remain virtual!
 	
-	std::string getType() const;
-	
 	//THIS IS THE FIX: The '= 0' makes it a pure virtual function.
- //AAnimal is now an abstract class and cannot be instantiated.
+ 	//AAnimal is now an abstract class and cannot be instantiated.
 	virtual void makeSound() const = 0;
+	std::string getType() const;
 };
 
 #endif

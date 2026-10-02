@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 15:05:46 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/06/14 09:33:23 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/10/02 17:05:20 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,13 @@ class Dog : public AAnimal
 		Dog();
 		Dog(const Dog &other);
 		Dog &operator=(const Dog &other);
-		virtual ~Dog();
+		~Dog();
 
 	// Dog fulfills the requirement of the abstract class by implementing this:
-	 virtual void makeSound() const;
-	
+	 	void makeSound() const;
 		void setIdea(int index, const std::string &idea);
 		std::string getIdea(int index) const;
-		const std::string* getIdeaAddress(int index) const;
+		Brain *getBrain() const;
 };
 
 #endif
