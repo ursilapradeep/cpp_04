@@ -6,7 +6,7 @@
 /*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 15:49:14 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/09/03 16:38:20 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/10/05 16:35:11 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ Brain::Brain()
 Brain::Brain(const Brain &other) 
 {
 	std::cout << "Brain copy constructor called" << std::endl;
-	*this = other; // Use assignment operator for deep copy
+	for (int i = 0; i < 100; i++)
+		ideas[i] = other.ideas[i];
 }
 
 Brain &Brain::operator=(const Brain &other) 

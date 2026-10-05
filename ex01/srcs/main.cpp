@@ -6,7 +6,7 @@
 /*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 15:11:28 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/09/03 16:17:41 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/10/05 16:26:30 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int main()
 		else
 			animals[i] = new Cat();
 	}
+	
 	std::cout << "--- Deleting animals---\n";
 	for (int i = 0; i < size; i++) 
 	{

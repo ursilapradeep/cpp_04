@@ -6,7 +6,7 @@
 #    By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/06 15:11:43 by uvadakku          #+#    #+#              #
-#    Updated: 2026/09/03 16:34:53 by uvadakku         ###   ########.fr        #
+#    Updated: 2026/09/16 11:55:42 by uvadakku         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,4 +47,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-
