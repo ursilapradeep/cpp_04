@@ -6,7 +6,7 @@
 /*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 14:35:36 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/10/02 17:05:18 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/10/19 18:03:53 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ Dog::~Dog()
 
 void Dog::makeSound() const 
 {
- std::cout << " Woof Woof" << std::endl;
+ std::cout << "Woof Woof" << std::endl;
 }
 
 void Dog::setIdea(int index, const std::string &idea) 

@@ -6,7 +6,7 @@
 /*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 15:11:28 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/09/16 11:54:26 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/10/19 18:03:20 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,10 @@ int main()
 				animals[i] = new Dog();
 			else
 				animals[i] = new Cat();
+		}
+		for (int i = 0; i < size; i++)
+		{
+			animals[i]->makeSound();
 		}
 		std::cout << "--- Deleting animals (Watch destructors carefully) ---\n";
 		for (int i = 0; i < size; i++) 
