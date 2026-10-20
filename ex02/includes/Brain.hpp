@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 15:49:09 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/06/14 10:16:13 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/10/02 17:02:33 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class Brain
 		void setIdea(int index, const std::string &idea);
 		//getter
 		std::string getIdea(int index)const;
-		const std::string *getIdeaAddress(int index)const;
+		void printIdeas() const;
 	};
 
 #endif

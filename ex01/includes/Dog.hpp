@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 15:05:46 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/06/11 16:25:44 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/09/03 15:30:47 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Dog : public Animal
 	void makeSound() const;
 	void setIdea(int index, const std::string &idea);
 	std::string getIdea(int index) const;
-	const std::string* getIdeaAddress(int index) const;
+	Brain *getBrain() const; // Getter for the Brain pointer
 };
 
 #endif

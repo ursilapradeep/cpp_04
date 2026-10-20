@@ -3,44 +3,47 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 14:22:52 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/06/10 08:59:15 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/09/03 16:21:59 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
-#include "Cat.hpp"
-#include "Dog.hpp"
 
-Animal::Animal(void) : type("Animal")
+Animal::Animal() : type("Animal")
 {
-	std::cout << "Animal Constructor creates animal. Type: Animal" << std::endl;
+	std::cout << "Animal default constructor called" << std::endl;
+}
+
+Animal::Animal(std::string type) : type(type)
+{
+	std::cout << "Animal constructor called" << std::endl;
 }
 
 Animal::Animal(const Animal &other): type(other.type)
 {
-	std::cout << "Animal copy_constructor copies Animal from Type: " << other.type << std::endl;
+	std::cout << "Animal copy constructor called "<< std::endl;
 }
 
 Animal:: ~Animal(void)
 {
-	std::cout << "Animal destructor: " << this->type << std::endl;
+	std::cout << "Animal destructor called" << std::endl;
 }
 Animal &Animal::operator=(const Animal &other)
 {
+	std::cout << "Animal copy assignment operator called" << std::endl;
 	if (this != &other)
 	{
-		type = other.type;
+		this->type = other.type;
 	}
-	std::cout << "Animal copy assignment operator " << std::endl;
 	return *this;
 }
 
 void Animal::makeSound(void) const
 {
-	std::cout << "An Animal without a specific type does not make sounds " << std::endl;
+	std::cout << "Animal sound " << std::endl;
 }
 
 std::string Animal::getType(void) const

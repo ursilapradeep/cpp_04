@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 12:16:32 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/06/10 08:48:05 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/09/03 14:26:40 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 class Animal
 {
 	protected:
-	
 	std::string type;
+
 	Animal(std::string type);
 	
 	public:

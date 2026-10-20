@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 15:11:28 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/06/12 16:10:49 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/10/05 13:06:09 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,31 +18,35 @@
 
 int main() 
 {
-	std::cout << " \n --Correct Polymorphism " << std::endl;
-	
 	const Animal *meta = new Animal(); 
-	const Animal *j = new Dog();
-	const Animal *i = new Cat();
+	const Animal *i = new Dog();
+	const Animal *j = new Cat();
 	
-	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;
+	std::cout << j->getType() << " " << std::endl;
 	
-	i->makeSound(); //will output the cat sound! 
-	j->makeSound(); //will output the Dog sound
+	i->makeSound(); //will output the Dog sound! 
+	j->makeSound(); //will output the Cat sound
 	meta->makeSound();
-
-	std::cout << " \n Incorrect_Polymorphism_does_not_make_wrong_cat_sound" << std::endl;
-	
-	const WrongAnimal *z = new WrongCat();
-	std::cout << z->getType() << " " << std::endl;
-	z->makeSound();
 	
 	delete meta;
 	delete j;
 	delete i;
-	delete z;
 	
-	return 0; 
+	std::cout << " \n -----Incorrect_Polymorphism-----" << std::endl;
+	{
+	const WrongAnimal *wronganimal = new WrongAnimal();
+	const WrongAnimal *wrongcat = new WrongCat();
+	
+	std::cout << wronganimal->getType() << " " << std::endl;
+	std::cout << wrongcat->getType() << " " << std::endl;
+	
+	wronganimal->makeSound(); 
+	wrongcat->makeSound();
+
+	delete wronganimal;
+	delete wrongcat;
+
+	return 0;
+	}
 }
-
-

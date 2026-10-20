@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 15:51:44 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/06/11 16:38:14 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/09/03 16:21:59 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Cat : public Animal
 	void makeSound() const;
 	void setIdea(int index, const std::string &idea);
 	std::string getIdea(int index) const;
-	const std::string* getIdeaAddress(int index) const;
+	Brain *getBrain() const; // Getter for the Brain pointer
 };
 
 #endif

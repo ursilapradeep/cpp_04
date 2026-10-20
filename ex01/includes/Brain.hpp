@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 15:49:09 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/06/11 16:04:20 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/09/03 16:21:59 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,14 @@ class Brain
 		//Overloaded constructor
 		Brain &operator = (const Brain &other);
 
-		//Deconstructor
+		//Destructor
 		~Brain();
 
+		void setIdea(int index, const std::string &idea);
 		//getter
 		std::string getIdea(int index)const;
-		const std::string *getIdeaAddress(int index)const;
-		//setter
-		void setIdea(int index, const std::string &idea);
+		void printIdeas() const;
+		
 	};
 
 #endif

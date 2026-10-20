@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 15:21:44 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/06/10 08:58:28 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/10/02 16:48:35 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,25 @@
 
 WrongAnimal::WrongAnimal(void) : type("WrongAnimal")
 {
-	std::cout << "Wrong Animal Constructor creates Wrong animal. Type: Wrong Animal" << std::endl;
+	std::cout << "WrongAnimal Constructor called." << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &other): type(other.type)
 {
-	std::cout << "WrongAnimal copy_constructor copies WrongAnimal from Type: " << other.type << std::endl;
+	std::cout << "WrongAnimal copy_constructor called  " << std::endl;
 }
 
 WrongAnimal:: ~WrongAnimal(void)
 {
-	std::cout << "WrongAnimal destructor: " << this->type << std::endl;
+	std::cout << "WrongAnimal destructor called " << std::endl;
 }
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other)
 {
+	std::cout << "WrongAnimal copy assignment operator called " << std::endl;
 	if (this != &other)
 	{
-		type = other.type;
+		this->type = other.type;
 	}
-	std::cout << "WrongAnimal copy assignment operator " << std::endl;
 	return *this;
 }
 

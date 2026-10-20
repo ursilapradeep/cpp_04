@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 15:49:14 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/06/14 09:01:59 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/10/02 16:26:33 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,20 @@
 
 Brain::Brain() 
 {
- std::cout << "Brain: default constructor" << std::endl;
+ std::cout << "Brain default constructor called" << std::endl;
 }
 
 Brain::Brain(const Brain &other) 
 {
-	std::cout << "Brain: copy constructor" << std::endl;
-	for (int i = 0; i < 100; i++)
-		ideas[i] = other.ideas[i];
+	std::cout << "Brain copy constructor called" << std::endl;
+	*this = other; // Use assignment operator for deep copy
 }
 
 Brain &Brain::operator=(const Brain &other) 
 {
+	std::cout << "Brain assignment operator called" << std::endl;
 	if (this != &other) 
 	{
-		std::cout << "Brain: assignment operator" << std::endl;
 		for (int i = 0; i < 100; i++)
 			ideas[i] = other.ideas[i];
 	}
@@ -43,7 +42,7 @@ Brain &Brain::operator=(const Brain &other)
 
 Brain::~Brain() 
 {
- std::cout << "Brain: destructor" << std::endl;
+ std::cout << "Brain destructor called" << std::endl;
 }
 
 void Brain::setIdea(int index, const std::string &idea) 
@@ -59,9 +58,13 @@ std::string Brain::getIdea(int index) const
 	return "";
 }
 
-const std::string* Brain::getIdeaAddress(int index) const
+void Brain::printIdeas() const
 {
-	if (index >= 0 && index < 100)
-		return &ideas[index];
-	return nullptr;
+	for (int i = 0; i < 100; i++)
+	{
+		if (!ideas[i].empty())
+		{
+			std::cout << "Idea "<< i << ":" << ideas[i] << std::endl;
+		}
+	}
 }

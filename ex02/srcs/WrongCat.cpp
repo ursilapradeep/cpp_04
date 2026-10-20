@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uvadakku <uvadakku@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 15:21:50 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/06/10 08:58:14 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/10/02 16:59:57 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,22 @@
 
 WrongCat::WrongCat()
 {
-	type = "WrongCat";
-	std::cout << "WrongCat: default Constructor" << std::endl;
+
+	std::cout << "WrongCat default Constructor called" << std::endl;
+	this->type = "WrongCat";
 }
 
 WrongCat::WrongCat(const WrongCat &other) : WrongAnimal(other)
 {
-	type = "WrongCat";
-	std::cout << "WrongCat: copy Constructor" << std::endl;
+	std::cout << "WrongCat copy Constructor called" << std::endl;
+	this->type = "WrongCat";
 }
 
 WrongCat &WrongCat::operator=(const WrongCat &other)
 {
+	std::cout << "WrongCat Assignment operator called" << std::endl;
 	if (this != &other)
 	{
-		std::cout << "WrongCat Assignation operator called" << std::endl;
 		type = other.type;
 	}
 	return *this;
@@ -37,11 +38,11 @@ WrongCat &WrongCat::operator=(const WrongCat &other)
 
 WrongCat::~WrongCat()
 {
-	std::cout << "WrongCat: Destructor" << std::endl;
+	std::cout << "WrongCat Destructor called" << std::endl;
 }
 
 void WrongCat::makeSound() const 
 {
-	std::cout << "WrongCat: click click" << std::endl;
+	std::cout << "click click" << std::endl;
 }
 
