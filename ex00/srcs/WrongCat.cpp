@@ -6,7 +6,7 @@
 /*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 15:21:50 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/09/02 15:38:39 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/10/05 12:25:20 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 WrongCat::WrongCat() : WrongAnimal()
 {
+	type = "WrongCat";
 	std::cout << "WrongCat default Constructor called" << std::endl;
 }
 

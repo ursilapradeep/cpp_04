@@ -6,7 +6,7 @@
 /*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 14:35:36 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/09/03 16:38:08 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/10/19 16:30:27 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ Dog &Dog::operator=(const Dog &other)
 	{
 		
 		Animal::operator=(other); // Call base class assignment operator
+		delete brain; // Free existing brain memory
 		brain = new Brain(*other.brain); // Deep copy
 	}
 	return *this;

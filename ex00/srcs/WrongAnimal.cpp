@@ -6,14 +6,14 @@
 /*   By: uvadakku <uvadakku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 15:21:44 by uvadakku          #+#    #+#             */
-/*   Updated: 2026/09/02 15:37:41 by uvadakku         ###   ########.fr       */
+/*   Updated: 2026/10/05 15:20:46 by uvadakku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
-WrongAnimal::WrongAnimal() 
+WrongAnimal::WrongAnimal() : type("WrongAnimal")
 {
 	std::cout << "WrongAnimal default Constructor called" << std::endl;
 }
@@ -29,11 +29,11 @@ WrongAnimal:: ~WrongAnimal(void)
 }
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other)
 {
+	std::cout << "WrongAnimal copy assignment operator " << std::endl;
 	if (this != &other)
 	{
 		type = other.type;
 	}
-	std::cout << "WrongAnimal copy assignment operator " << std::endl;
 	return *this;
 }
 
